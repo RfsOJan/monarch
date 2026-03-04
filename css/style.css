@@ -34,25 +34,44 @@ header {
 
 
 .menu-desktop {
-    display: none;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menu UL */
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 16px;
 }
 
 h1 {
     font-size: 32px ;
     text-align: center;
-    background-color: rgb(129, 126, 126);
+    background-color: rgb(65, 65, 65);
 }
 
 h2 {
     font-size: 28px;
     text-align: center;
-    background-color: chocolate;
+    background-color: rgb(65, 65, 65);
 }
 
 /* Responsivo */
 
+/* A partir de telas grandes */
+
 @media (min-width: 768px) {
+    
+    header {
+    padding: 1rem 6rem ;
+    }
     .menu-desktop {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
 }

@@ -8,6 +8,38 @@
     --fonte-subtítulo: "Quicksand", sans-serif;
 }
 
+/* Variáveis de cores */
+/* Tema dark */
+:root, :root[data-theme='dark'] {
+
+    --cor-fundo: #201e1e;
+    --cor-fundo-secundaria: #1d1a1a;
+
+    --cor-txt-menu: #8383838b;
+    --cor-destaque: #fff;
+    --icone-tema: #e9be00;
+
+}
+
+
+
+/* Tema Claro */
+:root[data-theme='light'] {
+
+    --cor-fundo: #fff;
+    --cor-fundo-secundaria: #aaa;
+
+    --cor-txt-menu: #4e4c4cc7;
+    --cor-destaque: #111;
+    --icone-tema: #a2aaaa;
+}
+
+/*Filtro Cor Logo */
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+    /* para img preto */
+}
+
 
 /* Fontes Utilizadas */
 /* Converter REM em PX */
@@ -33,11 +65,11 @@ html {
 
 /* TODA A ESTRUTURA DO SITE */
 body {
-    background: linear-gradient(90deg, rgb(11, 45, 85) 20%, rgb(0, 0, 0) 100%);
+    background-color:  var(--cor-fundo-secundaria);
 }
 
 header {
-    background: rgb(0, 0, 0);
+    background: var(--cor-fundo);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -69,10 +101,14 @@ header {
 }
 
 .menu-texto {
+    color: var(--cor-txt-menu);
+
     text-transform: capitalize;
-    font-size: 1.8rem;
-    /* 18px */
-    font-family: var(--fonte-menu)
+    font-size: 1.8rem; /* 18px */ 
+    font-family: var(--fonte-menu);
+    font-weight: 600;
+
+    
 }
 
 .logo img {
@@ -98,9 +134,9 @@ h2 {
 
 /* Herança */
 
-.menu-link :active .menu-texto,
-.menu-link :hover .menu-texto {
-    color: var(--cor-destaque) red ;
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-texto {
+    color: var(--cor-destaque)  ;
 }
 
 .header-toggle {

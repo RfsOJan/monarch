@@ -16,10 +16,12 @@
     --cor-fundo-secundaria: #1d1a1a;
 
     --cor-txt-menu: #8383838b;
-    --cor-destaque: #fff;
-    --icone-tema: #e9be00;
-    --cor-h1: #fff ;
-
+    --cor-destaque: #e5e5e6;
+    --icone-tema: #ffffff;
+    --cor-h1: #fafafa ;
+    --cor-textos: #fcfeff;
+    --destaque-icones: #106074;
+    
 }
 
 
@@ -28,12 +30,12 @@
 :root[data-theme='light'] {
 
     --cor-fundo: #fff;
-    --cor-fundo-secundaria: #aaa;
+    --cor-fundo-secundaria: #f1f1f1;
 
-    --cor-txt-menu: #4e4c4cc7;
-    --cor-destaque: #111;
-    --icone-tema: #a2aaaa;
-    --cor-h1: #000;
+    --cor-txt-menu: #ffffffc7;
+    --cor-destaque: #000000;
+    --icone-tema: #cdcfcf;
+    --cor-h1: #ffffff;
 }
 
 /*Filtro Cor Logo */
@@ -114,8 +116,9 @@ header {
 }
 
 .logo img {
-    width: 50rem;
+    width: 25rem;
     height: 20rem;
+    
 }
 
 
@@ -124,14 +127,16 @@ h1 {
     font-size: 32px;
     text-align: center;
     background-color: rgb(0, 0, 0);
-    color: aliceblue;
+    color: rgb(177, 177, 177);
+    font-family: var(--fonte-menu);
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
     background-color: rgb(0, 0, 0);
-    color: aliceblue;
+    color: rgb(230, 230, 230);
+    font-family: var(--fonte-título);
 }
 
 /* Herança */
@@ -139,6 +144,7 @@ h2 {
 .menu-link.active .menu-texto,
 .menu-link:hover .menu-texto {
     color: var(--cor-destaque)  ;
+
 }
 
 .header-toggle {
@@ -150,9 +156,60 @@ h2 {
 
 /* Hero = HOME */
 h1 {
-    color: var(--cor-h1)
+    color: var(--cor-h1);
+    font-size: 8.0rem;
+    
 }
 
+ /* Tamanho do Texto */
+
+strong {
+    font-size: 2.5rem;
+    font-family:var(--fonte-menu) ;
+}
+
+p {
+    color: var(--cor-textos);
+    font-size: 1.8rem;
+    font-family: var(--f);
+}
+
+/* Redes sociais */
+.menu-social { /* UL */
+    display: flex;
+    list-style: none;
+    gap:1.2rem;
+    padding: 0%;
+}
+
+.menu-social .social-icon {
+    color: var(--cor-h1);
+    color: #000;
+    font-size: 2rem;
+    background: #676b83;
+    padding: 5px 10px;
+    border-radius: 25%;
+}
+
+.menu-social .social-icon :hover {
+    color: var(--destaque-icones);
+}
+
+/* Carousel */
+
+/* Estrutura dos 3 slides */
+.carousel .carousel-item {
+    height: 100vh; /* Viewport High */
+    min-height: 20px;
+}
+
+
+/* Tamanho das imagens */
+.carousel .carousel-item img,
+.carousel .carousel-item .ratio {
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* Responsivo */

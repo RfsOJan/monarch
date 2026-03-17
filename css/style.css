@@ -17,10 +17,10 @@
 
     --cor-txt-menu: #8383838b;
     --cor-destaque: #e5e5e6;
-    --icone-tema: #ffffff;
-    --cor-h1: #fafafa ;
+    --icone-tema: #20447a;
+    --cor-h1: #ffffff ;
     --cor-textos: #fcfeff;
-    --destaque-icones: #106074;
+    --destaque-icones: #1f428f;
     
 }
 
@@ -30,9 +30,9 @@
 :root[data-theme='light'] {
 
     --cor-fundo: #fff;
-    --cor-fundo-secundaria: #f1f1f1;
+    --cor-fundo-secundaria: #ffffff;
 
-    --cor-txt-menu: #ffffffc7;
+    --cor-txt-menu: #0e0606c7;
     --cor-destaque: #000000;
     --icone-tema: #cdcfcf;
     --cor-h1: #ffffff;
@@ -191,8 +191,9 @@ p {
     border-radius: 25%;
 }
 
-.menu-social .social-icon :hover {
+.menu-social .social-icon:hover {
     color: var(--destaque-icones);
+    transition: 0.3s ease;
 }
 
 /* Carousel */
@@ -201,6 +202,7 @@ p {
 .carousel .carousel-item {
     height: 100vh; /* Viewport High */
     min-height: 20px;
+    pointer-events: none; /* "pointer events: bloquear botão direito do mouse */
 }
 
 
@@ -209,9 +211,69 @@ p {
 .carousel .carousel-item .ratio {
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    pointer-events: none;
 }
 
+/* Filtro ou overlay escuro sutil acima dos slides */
 
+/* Pseudo-Elemento */
+.carousel .carousel-item::before{
+    content: "";
+    background: rgba(44, 41, 41, 0.507);
+    position: absolute;
+    inset: 0;
+    display: flex;
+}
+
+.carousel .carousel-caption {
+    position: absolute;
+    inset: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: ;
+}
+
+.carousel h5 {
+    font-size: 5rem;
+}
+.carousel p {
+    font-size: 2.2rem;
+}
+
+.carousel h5
+.carousel p {
+    text-shadow: 0 2px 14px;
+}
+
+.video {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.video-iframe {
+    aspect-ratio: 16/9;
+    width: 70vw;
+    box-shadow: 0 15px 15px -2px #ffffff89;
+}
+.complemento {
+    display: flex;
+    background: red;
+    padding: 6rem 1rem 2rem;
+    margin-top: -5rem;
+    justify-content: center;
+}
+
+.complemento h2 {
+    font-size: 2rem;
+    text-transform: none;
+    letter-spacing: ;
+    font-weight: ;
+    font-family: var(--fonte-subtítulo);
+}
 /* Responsivo */
 
 /* A partir de telas grandes */

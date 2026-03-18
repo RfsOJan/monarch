@@ -164,6 +164,7 @@ h2 {
 h1 {
     color: var(--cor-h1);
     font-size: 8.0rem;
+    font-family: var(--fonte-título);
     
 }
 
@@ -205,122 +206,205 @@ p {
 /* Carousel */
 
 /* Estrutura dos 3 slides */
+
+/* Altura do Hero em Tela Cheia */
 .carousel .carousel-item {
-    height: 100vh; /* Viewport High */
-    min-height: 20px;
-    pointer-events: none; /* "pointer events: bloquear botão direito do mouse */
+    height: 100vh; /* ViewPort Hight */
+    min-height: 400px;
 }
 
-
-/* Tamanho das imagens */
+/* tamanho das imagens */
 .carousel .carousel-item img,
 .carousel .carousel-item .ratio {
     height: 100%;
-    object-fit: cover;
+    bottom: 30%;
+    object-fit: center;
     object-position: center;
+    /* Bloquear açoes Click Direito Mouse */
     pointer-events: none;
 }
 
-/* Filtro ou overlay escuro sutil acima dos slides */
+/* Filtro ou Overlay escuro Sutil acima dos slides */
 
 /* Pseudo-Elemento */
-.carousel .carousel-item::before{
+.carousel .carousel-item::before {
     content: "";
-    background: rgba(44, 41, 41, 0.507);
+    background: #000000a4;
     position: absolute;
     inset: 0;
-    display: flex;
 }
 
 .carousel .carousel-caption {
     position: absolute;
-    inset: 330px;
+    inset: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .carousel h5 {
     font-size: 5rem;
+    font-weight: 800;
 }
+
 .carousel p {
     font-size: 2.2rem;
+    color: #fff;
 }
 
-.carousel h5
+.carousel h5,
 .carousel p {
-    text-shadow: 0 2px 14px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.725);
+    
 }
 
+/* Centralizar Objeto */
 .video {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.video-iframe {
+.video iframe {
     aspect-ratio: 16/9;
-    width: 70vw;
-    box-shadow: 0 15px 15px -2px #ffffff89;
+    width: 95%;
+    box-shadow: 0 15px 15px -2px #fff;
 }
+
 .complemento {
     display: flex;
-    background: red;
+    background: var(--cor-fundo);
     padding: 6rem 1rem 2rem;
     margin-top: -5rem;
     justify-content: center;
+
 }
 
 .complemento h2 {
     font-size: 2rem;
     text-transform: none;
-    letter-spacing: a;
-    font-weight: a;
-    font-family: var(--fonte-subtítulo);
+    letter-spacing: normal;
+    font-weight: 500;
+    font-family: var(--fonte-padrao);
+    color: var(--cor-titulo);
 }
 
-/* Seção geral */
+
+/* Seção Geral */
+/* Vamos ir atualizando essa parte */
+
+
+#home .pecas {
+    padding: 4rem 2rem;
+}
+
+/* Peças */
+
+.pecas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Voltar */
+    scroll-margin-top: ;
+}
+
+.pecas h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--fonte-menu);
+    color: var(--cor-titulo);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    /* Empurra o video */
+    margin-bottom: 5rem;
+}
+
+
+
 
 
 
 
 /* Responsivo */
-/* Largura até */
 
-@media (max-width:768px) {
+/* Largura ate */
+@media (max-width: 768px) {
+    .carousel .carousel-inner {
+        margin-top: -2rem;
+    }
 
-
-.carousel .carousel.inner {
-
-
-margin-top: -4.2rem;
-padding-top: 7rem;
-}
-
-/* voltar aqui */
+    #home {
+        padding-top: 6rem;
+    }
 
 }
-/* A partir de telas grandes */
 
-@media (min-width: 768px) {
+
+
+/* A partir de Telas Grandes */
+@media (min-width:768px) {
 
     header {
-        padding: 1rem 6rem;
+        padding: 1rem 10rem;
+        justify-content: flex-start;
+        gap: 2rem;
     }
 
     .menu-desktop {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        margin: auto;
     }
-}   
 
-/* telas maiores que 1440px */
+    .logo {
+        margin-right: auto;
+    }
+
+    .carousel .carousel-inner {
+        margin-top: -4.2rem;
+        padding-top: 7rem;
+    }
+
+    /* Voltar Aqui */
+    #home {
+        padding: 4rem 10rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+}
+
+/* Telas maiores que 1400px */
 @media (min-width: 1400px) {
     h1 {
-        
+        font-size: 6.5rem;
+    }
+
+    /* Voltar aqui */
+    .complemento,
+    .pecas {
+        padding: 5rem 7rem 4rem;
+        margin-top: -7rem;
+    }
+
+    .complemento h2 {
+        font-size: 4.5rem;
     }
 }

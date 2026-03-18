@@ -21,6 +21,7 @@
     --cor-h1: #ffffff ;
     --cor-textos: #fcfeff;
     --destaque-icones: #1f428f;
+    --cor-borda: #585757a2;
     
 }
 
@@ -72,12 +73,17 @@ body {
     background-color:  var(--cor-fundo-secundaria);
 }
 
+/* Cabeçalho */
 header {
     background: var(--cor-fundo);
-    width: 100%;
+    width: 100%;  /* largura */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 200;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--cor-borda)
 }
 
 
@@ -233,7 +239,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: ;
+
 }
 
 .carousel h5 {
@@ -270,12 +276,32 @@ align-items: center;
 .complemento h2 {
     font-size: 2rem;
     text-transform: none;
-    letter-spacing: ;
-    font-weight: ;
+    letter-spacing: a;
+    font-weight: a;
     font-family: var(--fonte-subtítulo);
 }
-/* Responsivo */
 
+/* Seção geral */
+
+
+
+
+/* Responsivo */
+/* Largura até */
+
+@media (max-width:768px) {
+
+
+.carousel .carousel.inner {
+
+
+margin-top: -4.2rem;
+padding-top: 7rem;
+}
+
+/* voltar aqui */
+
+}
 /* A partir de telas grandes */
 
 @media (min-width: 768px) {
@@ -289,5 +315,12 @@ align-items: center;
         justify-content: center;
         align-items: center;
         margin: auto;
+    }
+}   
+
+/* telas maiores que 1440px */
+@media (min-width: 1400px) {
+    h1 {
+        
     }
 }

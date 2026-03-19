@@ -21,7 +21,7 @@
     --cor-h1: #ffffff ;
     --cor-textos: #fcfeff;
     --destaque-icones: #1f428f;
-    --cor-borda: #585757a2;
+    --cor-borda: #c9bebea2;
     
 }
 
@@ -30,13 +30,13 @@
 /* Tema Claro */
 :root[data-theme='light'] {
 
-    --cor-fundo: #fff;
+    --cor-fundo: #ffffff;
     --cor-fundo-secundaria: #ffffff;
 
     --cor-txt-menu: #0e0606c7;
     --cor-destaque: #000000;
-    --icone-tema: #cdcfcf;
-    --cor-h1: #ffffff;
+    --icone-tema: #e2dbdb;
+    --cor-h1: #000000;
 }
 
 /*Filtro Cor Logo */
@@ -165,6 +165,7 @@ h1 {
     color: var(--cor-h1);
     font-size: 8.0rem;
     font-family: var(--fonte-título);
+
     
 }
 
@@ -217,8 +218,7 @@ p {
 .carousel .carousel-item img,
 .carousel .carousel-item .ratio {
     height: 100%;
-    bottom: 30%;
-    object-fit: center;
+    object-fit: cover;
     object-position: center;
     /* Bloquear açoes Click Direito Mouse */
     pointer-events: none;
@@ -402,6 +402,7 @@ p {
     .pecas {
         padding: 5rem 7rem 4rem;
         margin-top: -7rem;
+        color: #cdcfcf;
     }
 
     .complemento h2 {

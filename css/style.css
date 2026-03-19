@@ -236,7 +236,7 @@ p {
 
 .carousel .carousel-caption {
     position: absolute;
-    inset: 150px;
+    inset: 405px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -326,6 +326,12 @@ p {
     margin-top: 2rem;
     /* Empurra o video */
     margin-bottom: 5rem;
+}
+
+/* Articles dos projetos */
+.projeto-card {
+    display: flex;
+    flex-direction: column;
 }
 
 

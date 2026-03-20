@@ -222,6 +222,7 @@ p {
     object-position: center;
     /* Bloquear açoes Click Direito Mouse */
     pointer-events: none;
+    border-radius: 5rem 5rem 5rem 5rem;
 }
 
 /* Filtro ou Overlay escuro Sutil acima dos slides */
@@ -318,6 +319,22 @@ p {
     text-transform: uppercase;
 }
 
+.conjuntos {
+     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* Voltar */
+    scroll-margin-top: ;
+}
+
+.conjuntos h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--fonte-menu);
+    color: var(--cor-titulo);
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
 .main-content {
     display: flex;
@@ -332,6 +349,14 @@ p {
 .projeto-card {
     display: flex;
     flex-direction: column;
+}
+
+/* Classes das IMGs */
+.card-cover {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5rem 50rem 15rem 5rem;
+
 }
 
 
@@ -394,6 +419,15 @@ p {
     h1 {
         font-size: 5rem;
     }
+
+}
+
+/* Telas maiores que 1200 */
+@media (min-width: 1200px) {
+
+  .projetos h2 {
+    font-size: 4rem;
+  }
 
 }
 

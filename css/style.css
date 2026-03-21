@@ -10,18 +10,20 @@
 
 /* Variáveis de cores */
 /* Tema dark */
-:root, :root[data-theme='dark'] {
+:root,
+:root[data-theme='dark'] {
 
     --cor-fundo: #201e1e;
-    --cor-fundo-secundaria: #1d1a1a;
+    --cor-fundo-secundaria: #27282c;
 
     --cor-txt-menu: #8383838b;
     --cor-destaque: #e5e5e6;
     --icone-tema: #20447a;
-    --cor-h1: #ffffff ;
-    --cor-textos: #fcfeff;
-    --destaque-icones: #1f428f;
+    --cor-h1: #ffffff;
+    --cor-textos: #ffffff;
+    --destaque-icones: #063896;
     --cor-borda: #c9bebea2;
+    --cor-icone: #b90101;
 }
 
 
@@ -29,7 +31,7 @@
 /* Tema Claro */
 :root[data-theme='light'] {
 
-    --cor-fundo: #ffffff;
+    --cor-fundo: #dbc0c0;
     --cor-fundo-secundaria: #ffffff;
 
     --cor-txt-menu: #0e0606c7;
@@ -69,13 +71,14 @@ html {
 
 /* TODA A ESTRUTURA DO SITE */
 body {
-    background-color:  var(--cor-fundo-secundaria);
+    background-color: var(--cor-fundo-secundaria);
 }
 
 /* Cabeçalho */
 header {
     background: var(--cor-fundo);
-    width: 100%;  /* largura */
+    width: 100%;
+    /* largura */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,17 +116,18 @@ header {
     color: var(--cor-txt-menu);
 
     text-transform: capitalize;
-    font-size: 1.8rem; /* 18px */ 
+    font-size: 1.8rem;
+    /* 18px */
     font-family: var(--fonte-menu);
     font-weight: 600;
 
-    
+
 }
 
 .logo img {
     width: 25rem;
-  
-    
+
+
 }
 
 
@@ -148,7 +152,7 @@ h2 {
 
 .menu-link.active .menu-texto,
 .menu-link:hover .menu-texto {
-    color: var(--cor-destaque)  ;
+    color: var(--cor-destaque);
 
 }
 
@@ -165,27 +169,28 @@ h1 {
     font-size: 8.0rem;
     font-family: var(--fonte-título);
 
-    
+
 }
 
- /* Tamanho do Texto */
+/* Tamanho do Texto */
 
 strong {
     font-size: 2.5rem;
-    font-family:var(--fonte-menu) ;
+    font-family: var(--fonte-menu);
 }
 
 p {
     color: var(--cor-textos);
-    font-size: 1.8rem;
-    font-family: var(--f);
+    font-size: 3.8rem;
+    font-family: var(--fonte-menu);
 }
 
 /* Redes sociais */
-.menu-social { /* UL */
+.menu-social {
+    /* UL */
     display: flex;
     list-style: none;
-    gap:1.2rem;
+    gap: 1.2rem;
     padding: 0%;
 }
 
@@ -209,7 +214,8 @@ p {
 
 /* Altura do Hero em Tela Cheia */
 .carousel .carousel-item {
-    height: 40vh; /* ViewPort Hight */
+    height: 40vh;
+    /* ViewPort Hight */
     min-height: 400px;
 }
 
@@ -257,7 +263,7 @@ p {
 .carousel h5,
 .carousel p {
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.725);
-    
+
 }
 
 /* Centralizar Objeto */
@@ -307,7 +313,7 @@ p {
     flex-direction: column;
     gap: 2rem;
     /* Voltar */
-    scroll-margin-top:0;
+    scroll-margin-top: 0;
 }
 
 .pecas h2 {
@@ -319,17 +325,26 @@ p {
     text-transform: uppercase;
 }
 
-.card-body .card-title {
-    color: var(--cor-h1)
-}
+/* Cards */
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+/* Título do produto */
+.card-body .card-title {
+    color: var(--cor-h1);
+    font-size: 3rem;
+}
+/* Parágrafo do produto */
 .card-body .card-description {
     font-family: var(--fonte-subtítulo)
 }
 
 /* Conjuntos */
 .conjuntos {
-     display: flex;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     /* Voltar */
@@ -359,20 +374,29 @@ p {
 .projeto-card {
     display: flex;
     flex-direction: column;
+    gap: 4rem;
 }
 
 /* Classes das IMGs */
 .card-cover {
-    width: 100%;
+    width: 50%;
     object-fit: cover;
     border-radius: 5rem 50rem 15rem 5rem;
+    flex-direction: row-reverse;
 
 }
 
 
-.card
+.card-lista {
+    background-color: red;
+    list-style: none;
+    padding: 0%;
+}
 
-
+.card-item{
+    color: var(--cor-txt-menu);
+    font-size: 1.8rem;
+}
 
 /* Responsivo */
 
@@ -396,12 +420,14 @@ p {
     .projeto-card {
         flex-direction: row;
     }
+
     .cover-pecas {
         width: 35%;
         object-fit: cover;
         border-radius: 5rem 5rem;
         margin: 10rem;
     }
+
     .card-reverse {
         /* Reverso/modo espelho */
         flex-direction: row-reverse;
@@ -453,9 +479,9 @@ p {
 /* Telas maiores que 1200 */
 @media (min-width: 1200px) {
 
-  .projetos h2 {
-    font-size: 4rem;
-  }
+    .projetos h2 {
+        font-size: 4rem;
+    }
 
 }
 

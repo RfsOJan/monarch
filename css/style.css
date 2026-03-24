@@ -313,7 +313,7 @@ p {
     flex-direction: column;
     gap: 2rem;
     /* Voltar */
-    scroll-margin-top: 0;
+    scroll-margin-top: 150px;
 }
 
 .pecas h2 {

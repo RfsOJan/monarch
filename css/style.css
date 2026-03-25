@@ -283,7 +283,9 @@ p {
     padding: 6rem 1rem 2rem;
     margin-top: -5rem;
     justify-content: center;
-
+    background-color: #00000000;
+    font-family: var(--fonte-subtítulo);
+    color: var(--cor-textos);
 }
 
 .complemento h2 {
@@ -294,6 +296,7 @@ p {
     font-family: var(--fonte-padrao);
     color: var(--cor-titulo);
     margin-top: 20px;
+    background-color: #00000000;
 }
 
 
@@ -327,11 +330,13 @@ p {
 
 /* Conjuntos */
 .conjuntos {
+    
     display: flex;
     flex-direction: column;
     gap: 2rem;
     /* Voltar */
-    scroll-margin-top: 0;
+    scroll-margin-top: 150px;
+    color: red
 }
 
 .conjuntos h2 {
@@ -401,8 +406,8 @@ p {
     font-family: var(--fonte-subtítulo);
     color: var(--cor-textos);
     font-size: 1.8rem;
-    font-family: var(--fonte-subtítulo);
     letter-spacing: 1px;
+
 }
 
 
@@ -431,6 +436,13 @@ p {
     color: var(--icone-tema);
     transition: 0.3s ease-out;
 }
+
+/* Contato */
+    .projetos h2
+    .contato {
+        display: flex;
+        background-color: #b90101;
+    }
 
 /* Responsivo */
 
@@ -541,3 +553,4 @@ p {
         font-size: 4.5rem;
     }
 }
+

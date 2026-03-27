@@ -24,7 +24,9 @@
     --destaque-icones: #063896;
     --cor-borda: #c9bebea2;
     --cor-icone: #b90101;
+    --icone-menu-mobile: #fff
 }
+
 
 
 
@@ -38,6 +40,7 @@
     --cor-destaque: #000000;
     --icone-tema: #e2dbdb;
     --cor-h1: #000000;
+    --icone-menu-mobile: #000;
 }
 
 /*Filtro Cor Logo */
@@ -123,6 +126,51 @@ header {
     font-family: var(--fonte-menu);
     font-weight: 600;
 }
+
+/* Menu Mobile */
+.btn-menu-mobile {
+    background: transparent;
+    color: var(--icone-menu-mobile);
+    border: none;
+    font-size: 1.8rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+/* Menu mobile (estilo e animação) */
+.menu-mobile {
+    /* NAV */
+    top: 0;
+    right: 0;
+    position: fixed;
+    opacity: 0;
+    background: var(--cor-fundo-secundaria);
+    z-index: 100;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 6.5rem;
+    border-left: 1px solid var(--cor-borda);
+    height: 100vh;
+    width: 35%;
+    transition: ease-in-out 0.3;
+}
+
+.menu-mobile- .active {
+    /* Ela volta ara o original */
+    transform: translateX(0%);
+}
+
+.menu-mobile .menu-lista {
+    width: 100%;
+    padding-top: 5rem;
+    text-align: ;
+    padding: 0;
+    margin: 0;
+}
+
+
 
 .logo img {
     width: 25rem;
@@ -503,12 +551,61 @@ flex-direction: column;
 gap: 1.5rem;
 }
 
-.form-contato input {
-    width: 100%;
-    background-color: var(--cor-destaque);
-    font-size: 1.8rem;
-    color: yellow
+/* Inputs */
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  /* Cor fundo secundaria */
+  background-color: var(--cor-fundo);
+  font-size: 1.8rem;
+  /* aumenta a distancia interna */
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  color: var(--cor-textos);
 }
+
+/* Pseudo elemento */
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+  /* Cor com Transparencia */
+  color: #8686867b;
+  font-size: 1.8rem;
+}
+
+
+.form-contato button {
+  border: 0;
+  background-color: var(--cor-fundo);
+  align-items: center;
+  /* Adapta ao Conteudo */
+  align-self: flex-start;
+  gap: 2rem;
+  display: flex;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 5px 5px 5px #b3b3b36b;
+}
+
+.form-contato button i, 
+.form-contato button span {
+  color: var(--cor-título);
+} 
+
+.form-contato button:hover {
+  filter: brightness(1.5);
+  transition: ease-in-out 0.3s;
+  background-color: #7a81858f;
+  transform: scale(1.03);
+}
+
+.form-contato button i {
+  font-size: 2rem;
+}
+
+
+/* Footer // Roda Pé */
+
 
 /* Responsivo */
 
@@ -556,6 +653,10 @@ gap: 1.5rem;
 
 /* A partir de Telas Grandes */
 @media (min-width:768px) {
+
+    .btn-menu-mobile {
+        display: none;
+    }
 
     header {
         padding: 1rem 10rem;

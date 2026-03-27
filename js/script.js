@@ -2,9 +2,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    //Onjeto no HTML ícone de Sol ou Lua)
+    //Objeto no HTML ícone de Sol ou Lua)
     const toggleTheme = document.getElementById('toggleTheme');
     const rootHtml = document.documentElement;
+    // Var para menu Hamburguer
+    const menuHamburger = document.getElementById('menuHamburger');
+    // Estrutura do menu - conteúdo/lista
+    const menuMobile = document.getElementById('menuMobile');
+    // Verificação ou condição
+    const icon = menuHamburger?.querySelector('i');
+
+
+
 
     //Função mudar/alternar a cor do tema dark/light)
 
@@ -24,4 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleTheme.addEventListener('click', changeTheme);
     }
 
+
+    // Alternar o Menu Mobile
+    function toggleMenu() {
+
+        //Lista nav
+        const isOpen = menuMobile.classList.toggle('active')
+        //Condição
+        if (icon) {
+            icon.classList.toggle('bi-list', !isOpen);
+            icon.classList.toggle('bi-x-lg', isOpen);
+        }
+    }
+
+
+    if (menuHamburger) {
+        menuHamburger.addEventListener('click', toggleMenu);
+    }
+    
 });
